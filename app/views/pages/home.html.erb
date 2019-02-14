@@ -1,0 +1,15 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<h1><%=@bonjour%></h1>
+
+
+<%if @bonjour == "au revoir"%>
+<h2>Salut Lulu</h2>
+<% else %>
+<h2>C'est une belle journée</h2>
+<% end %>
+
+<% @cinq.times do |i| %>
+ <h3> <%=i+1 %> - Ligne de texte </h3>
+<% end %>

@@ -1,0 +1,12 @@
+<h1>Détails du livre</h1>
+<h4>Titre: <%= @le_livre.title%></h4>  
+   <%= form_tag "/books/#{@le_livre.id}" , method: "patch" do %>
+<input type="text" name="title" >
+<input type="submit" value="Modifier le livre"><div><br><br></div>
+<% end %>
+
+<%= form_tag "/books/#{@le_livre.id}" , method: "delete" do %>
+<input type="submit" value="Supprimer le livre"><div><br></div>
+<% end %>
+
+<a href="/books">Retour à la liste</a>

@@ -1,0 +1,13 @@
+<h1>Index des livres</h1>
+
+
+<% @les_livres.each do |livre| %>
+    <h3><a href="/books/<%= livre.id %>"><%= livre.title %></a></h3>
+<% end %>
+
+
+<%= form_tag "/books", method:"post" do%>
+<input type="text" name="title" id="FormulaireDeLivre">
+<input type="submit" value="Ajouter un livre">
+<% end %>
+
